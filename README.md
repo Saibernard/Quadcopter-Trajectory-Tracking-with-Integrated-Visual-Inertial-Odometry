@@ -17,34 +17,43 @@ The core of this project was to ensure the quadcopter's adherence to the desired
 
 ### 3.1 Fundamental Equations
 
-Given the state \( x_t = [p_t, q_t, v_t, b_{ωt}, b_{at}]^T \):
+Given the state x(t) = [p(t), q(t), v(t), bω(t), ba(t)],
 
-- \( p_t \): position
-- \( q_t \): orientation (quaternion format)
-- And so on...
+- p(t): position
+- q(t): orientation (quaternion format)
+- vtvt​: velocity
+- bωtbωt​: gyroscope bias
+- batbat​: accelerometer bias
 
 The VIO state prediction based on IMU readings is:
-\[ x_{t+1} = f(x_t, u_t) \]
+
+x(t+1) = f(x(t), u(t))
+
+where ut=[ωt,at]Tut​=[ωt​,at​]T is the IMU readings of angular velocity and linear acceleration.
 
 ### 3.2 Noise Modeling
 
 Noise in VIO is typically modeled as Gaussian, for instance, the accelerometer reading is:
-\[ n_a \sim N(0, \sigma_a^2I_3) \]
+
+na = N(0, σa^2*I3)
 
 Similarly, for the gyroscope:
-\[ n_ω \sim N(0, \sigma_ω^2I_3) \]
+
+nω = N(0, σω^2*I3)
 
 ## 4. Trajectory Planning and Control
 
 ### 4.1 Trajectory Representation
 
 Using quintic splines, the trajectory can be represented as:
-\[ p(t) = a_0 + a_1t + a_2t^2 + a_3t^3 + a_4t^4 + a_5t^5 \]
+
+p(t) = a0 + a1*t + a2*t^2 + a3*t^3 + a4*t^4 + a5*t^5
 
 ### 4.2 Control Law
 
 The control input \( u \) for tracking a desired trajectory uses a PID controller:
-\[ u(t) = K_pe(t) + K_i \int e(t) dt + K_d \frac{de(t)}{dt} \]
+
+u(t) = Kp*e(t) + Ki*∫e(t) dt + Kd*de(t)/dt
 
 ## 5. Optimization for Robust Performance
 
@@ -55,7 +64,7 @@ Parameters were fine-tuned in `flightsim/sensors/vio_utils.py` to optimize perfo
 ### 5.2 Trajectory Aggressiveness
 
 An aggressive trajectory can affect state estimation. The relationship can be described as:
-\[ \Delta E = K_t \times \Delta T \]
+ΔE = Kt * ΔT
 
 ---
 
