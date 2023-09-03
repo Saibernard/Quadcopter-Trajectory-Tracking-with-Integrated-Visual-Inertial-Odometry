@@ -5,7 +5,13 @@ This repository delves into the intricate integration of Visual-Inertial Odometr
 
 ## 1. Introduction
 
-Throughout my journey in this course, I've progressively built on the foundations of robotic autonomy. In Project 1, I orchestrated a system where trajectories were planned and tracked accurately, leveraging the provided ground-truth states of the robot, namely its positions and velocities. By the time I embarked on Project 2, the emphasis shifted towards estimating the robot's state amidst the backdrop of noisy sensor readings, sidelining the robotic autonomy elements. In Project 3, the culmination was the integration of state estimation from Project 2 with the trajectory planning and control mechanisms established in Project 1. This method is in sync with reliable GPS-denied autonomy stacks prevalent in academic and industrial domains.
+Throughout my studies and explorations in autonomous systems, I've sequentially approached different facets of quadcopter autonomy. Initially, I focused on the precision of trajectory planning and tracking, ensuring that given the robot's ground-truth states, like positions and velocities, we could attain smooth and predictable motion paths.
+
+Subsequently, I ventured into the realm of state estimation. Here, I grappled with the challenge of determining the robot's state using just noisy sensor measurements. This phase was devoid of any planning or control, emphasizing purely on how sensor data can be accurately interpreted to surmise the robot's exact state.
+
+Marrying these two explorations, my recent endeavor is to fuse state estimation techniques with my previously established planning and control mechanisms. The aspiration is simple yet challenging: to harness the power of Visual Inertial Odometry (VIO) and use it in-the-loop, enabling the quadcopter to autonomously estimate its state and make planning and control decisions accordingly. This technique, as showcased by several academic and industrial benchmarks, has emerged as a robust solution for implementing a GPS-denied autonomy stack.
+
+Once this autonomous state estimation capability is achieved, the path forward beckons the integration of a mapping solution. This would empower the quadcopter to intuitively sense its surroundings, detecting obstacles via its onboard sensors. The ultimate goal is to devise an autonomous quadcopter that not only understands its spatial positioning but can also safely navigate environments by dynamically responding to obstacles.
 
 ## 2. Simulator Implementation
 
