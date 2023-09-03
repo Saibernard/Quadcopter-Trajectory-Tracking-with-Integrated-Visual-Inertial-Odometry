@@ -47,6 +47,8 @@ Similarly, for the gyroscope:
 
 nω = N(0, σω^2*I3)
 
+I3 is the identity matrix
+
 ## 4. Trajectory Planning and Control
 
 ### 4.1 Trajectory Representation
