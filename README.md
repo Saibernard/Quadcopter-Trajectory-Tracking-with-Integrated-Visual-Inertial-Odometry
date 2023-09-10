@@ -74,7 +74,23 @@ Parameters were fine-tuned in `flightsim/sensors/vio_utils.py` to optimize perfo
 An aggressive trajectory can affect state estimation. The relationship can be described as:
 ΔE = Kt * ΔT
 
+![3D_Path](https://github.com/Saibernard/Quadcopter-Trajectory-Tracking-with-Integrated-Visual-Inertial-Odometry/assets/112599512/9d59078c-89c3-4b0a-8ad4-567f1bf5a114)
+
+![A_Path,_Waypoints,_and_Trajectory](https://github.com/Saibernard/Quadcopter-Trajectory-Tracking-with-Integrated-Visual-Inertial-Odometry/assets/112599512/b3e65ba2-c842-4791-89b9-dbfbbdcde415)
+
+![output](https://github.com/Saibernard/Quadcopter-Trajectory-Tracking-with-Integrated-Visual-Inertial-Odometry/assets/112599512/d4fc8978-aa50-4efd-8094-9484610d77d6)
+
+
+![Position_vs_Time](https://github.com/Saibernard/Quadcopter-Trajectory-Tracking-with-Integrated-Visual-Inertial-Odometry/assets/112599512/a45262bd-c547-46f3-80a2-fb02c9bcf06e)
+
+
+![Attitude and position of qua](https://github.com/Saibernard/Quadcopter-Trajectory-Tracking-with-Integrated-Visual-Inertial-Odometry/assets/112599512/a0c564ee-ff48-43bd-aee7-c7359eeeb9ab)
+
+
+![Accelerometer measurements](https://github.com/Saibernard/Quadcopter-Trajectory-Tracking-with-Integrated-Visual-Inertial-Odometry/assets/112599512/e63d70b2-b444-48ff-a7f0-fd6749bc5c6f)
+
 ---
 
 **In Summary:** This project combines the principles of state estimation through Visual-Inertial Odometry with trajectory planning and control. The mathematical frameworks and formulas provide a comprehensive understanding of the methodologies involved.
+
 
